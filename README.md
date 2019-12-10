@@ -4,7 +4,7 @@ Info: A project for Java course in Transilvania University of Brasov
 
 # Java Projesi için rapor hazırlığı - LOG (TR)
 
-## Proje sırasında yaşanan sıkıntılar ve zorluklar 7
+## Proje sırasında yaşanan sıkıntılar ve zorluklar
 Yaptığım proje için arayüz tasarlamam gerekiyordu ve bunun için Java Swing'i kullanmam gerektiğini öğrendim. 
 Eclipse IDE'sine Swing'i kurdum ve çalıştırdım ama bir sorun vardı. 
 Tasarlamaya çalıştığım window'a buton koyup "Source" tabına döndüğümde Eclipse kapanıyordu. 
