@@ -62,26 +62,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="141" key="#com.intellij.ide.util.MemberChooser" timestamp="1578835383372">
+    <state x="574" y="141" key="#com.intellij.ide.util.MemberChooser" timestamp="1579062480175">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="574" y="141" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1578835383372" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1578865200880">
+    <state x="574" y="141" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1579062480175" />
+    <state width="1493" height="224" key="GridCell.Tab.0.bottom" timestamp="1579062906578">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1578865200880" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1578865200879">
+    <state width="1493" height="224" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1579062906578" />
+    <state width="1493" height="224" key="GridCell.Tab.0.center" timestamp="1579062906578">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1578865200879" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1578865200878">
+    <state width="1493" height="224" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1579062906578" />
+    <state width="1493" height="224" key="GridCell.Tab.0.left" timestamp="1579062906578">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1578865200878" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1578865200879">
+    <state width="1493" height="224" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1579062906578" />
+    <state width="1493" height="224" key="GridCell.Tab.0.right" timestamp="1579062906578">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1578865200879" />
+    <state width="1493" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1579062906578" />
+    <state x="647" y="229" key="UIDesigner.ListEditorDialog" timestamp="1579056876740">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="647" y="229" key="UIDesigner.ListEditorDialog/0.0.1536.864@0.0.1536.864" timestamp="1579056876740" />
     <state x="477" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1579050020116">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -90,5 +94,13 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="585" y="368" width="422" height="352" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/0.0.1536.864@0.0.1536.864" timestamp="1578834248513" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1579060418680">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1579060418680" />
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup" timestamp="1579062534996">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="185" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1579062534996" />
   </component>
 </project>

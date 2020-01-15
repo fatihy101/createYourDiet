@@ -1,5 +1,7 @@
 package dietCreator;
 
+import javafx.scene.control.ComboBox;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,22 +16,36 @@ public class dietCreatorApp extends JFrame {
     private JButton calculateButton;
     public JTextArea informationArea;
     private JButton showDietButton;
-//TODO: Calculate the minimum calories intake of the person.
-    //Todo: Research what is the correlation between age and BMI and make it useful in the code.
+    private JComboBox genderBox;
+    private JComboBox exerciseBox;
+    private JButton hideDietListButton;
+
     //Todo: Write a database or at least an  array that contains food and their calorie values and make daily chart for it.
     //Todo: Make a limitation for maximum and minimum height and weight.
-    //Todo extra: Do pop ups for buttons.    
+    //Todo extra: Do pop ups for buttons.
     public dietCreatorApp() //Constructor
-    {
-        add(rootPanel);
+    { add(rootPanel);
         setTitle("Diet Creator");
-        setSize(300,500); //Attention: Size has been set much more smaller than the normal temporarily. Ratio 16:9 must be.
+        setSize(255,200); //Attention: Size has been set much more smaller than the normal temporarily. Ratio 16:9 must be.
         setVisible(true);
         DecimalFormat dFormat = new DecimalFormat("#.00"); //Format to  see less decimal part.
 
+        String[] exerciseStatus = {"sedentary (little or no exercise)","lightly active (sports 1-3 days/week)",
+                "partly active (sports 3-5 days/week)","very active (sports 6-7 days/week)",
+                "extra active (very hard exercise)"};
+        for (int i = 0;i <exerciseStatus.length;i++)
+        {
+            exerciseBox.addItem(exerciseStatus[i]);
+        }
+
+        genderBox.addItem("Male");
+        genderBox.addItem("Female");
+        //Listener for calculate button.
         calculateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
+                setSize(255,420);
+                informationArea.setText("");
                 double heightTemp = Integer.parseInt(heightText.getText());
                 heightTemp /= 100;
                 double BMI = Integer.parseInt(weightText.getText())/Math.pow(heightTemp,2);
@@ -37,10 +53,30 @@ public class dietCreatorApp extends JFrame {
 
                 informationArea.append("Your BMI is:" + BMIString);
                 String statusReport = personStatus(BMI, heightTemp,Integer.parseInt(weightText.getText()));
-                informationArea.append(statusReport);
+                informationArea.append(statusReport);//To show status of the person.
                 if(statusReport.equals("\nYou\'re underweight\n") || statusReport.equals("\nYou\'re overweight\n")|| statusReport.equals("\nYou\'re obese\n"))
-                    informationArea.append(idealKilo(BMI, heightTemp,Integer.parseInt(weightText.getText())));
+                    informationArea.append(idealKilo(BMI, heightTemp,Integer.parseInt(weightText.getText())));//To show ideal weight of the person.
+                String selectedGender = genderBox.getSelectedItem().toString();
+                int selectedExercise = exerciseBox.getSelectedIndex();
+                double minimumCal = minimumCalorie(Integer.parseInt(heightText.getText()),Integer.parseInt(weightText.getText()),Integer.parseInt(ageText.getText()),selectedGender,selectedExercise);
+                String minimumCalS = dFormat.format(minimumCal);
+                informationArea.append("\nMinimum Calories per day." + minimumCalS); //To show minimum calorie intake of a person.
 
+            }
+        }); // End of the calculate button
+
+        //To display dietList
+        showDietButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+        setSize(1650,500);
+            }
+        });//End of the showDiet button.
+
+        hideDietListButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                setSize(255,420);
             }
         });
     }
@@ -83,11 +119,43 @@ public class dietCreatorApp extends JFrame {
             return "Test";
     }
 
-    public static String minimumCalorie(double BMI, double height, double weight)
+    public static double minimumCalorie(double height, double weight,int age, String gender, int exerciseStatusIndex)
+    { //calculating the BMR (Basal Metabolic Rate) with Harris-Benedict equation
+   double bmr;
+    if(gender.equals("Male"))
     {
-        String calorieS = new String();
-        return calorieS;
+         bmr  = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+    }
+    else
+    {
+         bmr  = 447.593 + (9.247 * weight ) + (3.098 * height) - (4.330 *age);
+    }
+        double[] basicActivityFactor = {1.2,1.375,1.55,1.725,1.9};
+
+    for (int i= 0; i<basicActivityFactor.length;i++)
+    {
+        if (exerciseStatusIndex==i)
+        {
+            bmr*=basicActivityFactor[i];
+        }
+    }
+return bmr;
     }
 
+
+
+    public static JComboBox exerciseIdentifier()
+    {
+        JComboBox tempExercise = new JComboBox();
+        String[] exerciseStatus = {"sedentary (little or no exercise)"," lightly active (light exercise/sports 1-3 days/week)",
+        " moderately active (moderate exercise/sports 3-5 days/week)","very active (hard exercise/sports 6-7 days a week)",
+        "extra active (very hard exercise/sports and physical job or 2x training)"};
+        for (int i = 0;i <exerciseStatus.length;i++)
+        {
+            tempExercise.addItem(exerciseStatus[i]);
+        }
+
+        return tempExercise;
+    }
 
 }
