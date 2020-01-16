@@ -1,19 +1,16 @@
 package dietCreator;
 
-import javafx.scene.control.ComboBox;
 
 import javax.swing.*;
-import java.util.Scanner;
+
 
 public class Main {
 
     public static void main(String[] args) throws ClassNotFoundException, UnsupportedLookAndFeelException, InstantiationException, IllegalAccessException {
-        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        //messageBox();
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); //Change look of the UI
+        messageBox();
     dietCreatorApp form = new dietCreatorApp();
     form.setVisible(true); // To see the form elements.
-Scanner input = new Scanner(System.in);
-
     }
     public static void messageBox()
     {
