@@ -222,22 +222,26 @@
       </vspacer>
       <component id="38658" class="javax.swing.JTextArea" binding="mondayDiet">
         <constraints>
-          <grid row="1" column="5" row-span="13" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="5" row-span="13" col-span="1" vsize-policy="6" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
         <properties>
           <editable value="false"/>
+          <font name="Arial" size="12" style="0"/>
+          <lineWrap value="true"/>
         </properties>
       </component>
       <component id="ddbf1" class="javax.swing.JTextArea" binding="tuesdayDiet">
         <constraints>
-          <grid row="1" column="6" row-span="13" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="6" row-span="13" col-span="1" vsize-policy="6" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
         <properties>
           <editable value="false"/>
+          <font name="Arial" size="12" style="0"/>
+          <lineWrap value="true"/>
         </properties>
       </component>
       <hspacer id="4bca0">
@@ -252,12 +256,14 @@
       </hspacer>
       <component id="d088d" class="javax.swing.JTextArea" binding="wednesdayDiet">
         <constraints>
-          <grid row="1" column="7" row-span="13" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="7" row-span="13" col-span="1" vsize-policy="6" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
         <properties>
           <editable value="false"/>
+          <font name="Arial" size="12" style="0"/>
+          <lineWrap value="true"/>
         </properties>
       </component>
       <hspacer id="432e2">
@@ -287,12 +293,14 @@
       </hspacer>
       <component id="af40a" class="javax.swing.JTextArea" binding="thursdayDiet">
         <constraints>
-          <grid row="1" column="8" row-span="13" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="8" row-span="13" col-span="1" vsize-policy="6" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
         <properties>
           <editable value="false"/>
+          <font name="Arial" size="12" style="0"/>
+          <lineWrap value="true"/>
         </properties>
       </component>
       <component id="a4a43" class="javax.swing.JTextArea" binding="fridayDiet">
@@ -303,26 +311,32 @@
         </constraints>
         <properties>
           <editable value="false"/>
+          <font name="Arial" size="12" style="0"/>
+          <lineWrap value="true"/>
         </properties>
       </component>
       <component id="917d8" class="javax.swing.JTextArea" binding="saturdayDiet">
         <constraints>
-          <grid row="1" column="10" row-span="13" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="10" row-span="13" col-span="1" vsize-policy="6" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
         <properties>
           <editable value="false"/>
+          <font name="Arial" size="12" style="0"/>
+          <lineWrap value="true"/>
         </properties>
       </component>
       <component id="cb2e6" class="javax.swing.JTextArea" binding="sundayDiet">
         <constraints>
-          <grid row="1" column="11" row-span="13" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="11" row-span="13" col-span="1" vsize-policy="6" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
         <properties>
           <editable value="false"/>
+          <font name="Arial" size="12" style="0"/>
+          <lineWrap value="true"/>
           <text value=""/>
         </properties>
       </component>

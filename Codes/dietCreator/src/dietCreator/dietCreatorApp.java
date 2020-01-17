@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
+import java.util.*;
 
 public class dietCreatorApp extends JFrame {
 
@@ -66,6 +67,7 @@ public class dietCreatorApp extends JFrame {
                 double minimumCal = minimumCalorie(Integer.parseInt(heightText.getText()),Integer.parseInt(weightText.getText()),Integer.parseInt(ageText.getText()),selectedGender,selectedExercise);
                 String minimumCalS = dFormat.format(minimumCal);
                 informationArea.append("\nMinimum Calories per day." + minimumCalS); //To show minimum calorie intake of a person.
+foodDisplay(minimumCal,mondayDiet,tuesdayDiet,wednesdayDiet,thursdayDiet,fridayDiet,saturdayDiet,sundayDiet);
 
             }
         }); // End of the calculate button
@@ -75,6 +77,8 @@ public class dietCreatorApp extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
         setSize(1650,500);
+
+
             }
         });//End of the showDiet button.
 
@@ -146,6 +150,159 @@ public class dietCreatorApp extends JFrame {
     }
 return bmr;
     }
+
+    public static void foodDisplay(double intakeCalories,JTextArea mondayDiet,JTextArea tuesdayDiet,JTextArea wednesdayDiet,
+                                   JTextArea thursdayDiet, JTextArea fridayDiet, JTextArea saturdayDiet, JTextArea sundayDiet )
+    {
+//Monday
+        mondayDiet.setText("");
+        foodList foodlist0 = new foodList(intakeCalories);
+        mondayDiet.append("For breakfast");
+        for(int i =0; i<foodlist0.selectedBreakfastItems.size(); i++)
+        {
+            mondayDiet.append("\n" + foodlist0.selectedBreakfastItems.get(i).name);
+        }
+
+        mondayDiet.append("\n\nFor lunch");
+        for(int i =0; i<foodlist0.selectedLunchDinnerItems.size(); i++)
+        {
+            mondayDiet.append("\n" + foodlist0.selectedLunchDinnerItems.get(i).name);
+        }
+        mondayDiet.append("\n\nFor dinner");
+        for(int i =0; i<foodlist0.selectedLunchDinnerItems.size(); i++)
+        {
+            if (foodlist0.selectedLunchDinnerItems.get(i).type=="Dinner"){
+            mondayDiet.append("\n" + foodlist0.selectedLunchDinnerItems.get(i).name);}
+        }
+//Tuesday
+        tuesdayDiet.setText("");
+        foodList foodlist1 = new foodList(intakeCalories);
+        tuesdayDiet.append("For breakfast");
+        for(int i =0; i<foodlist1.selectedBreakfastItems.size(); i++)
+        {
+            tuesdayDiet.append("\n" + foodlist1.selectedBreakfastItems.get(i).name);
+        }
+
+        tuesdayDiet.append("\n\nFor lunch");
+        for(int i =0; i<foodlist1.selectedLunchDinnerItems.size(); i++)
+        {
+            tuesdayDiet.append("\n" + foodlist1.selectedLunchDinnerItems.get(i).name);
+        }
+        tuesdayDiet.append("\n\nFor dinner");
+        for(int i =0; i<foodlist1.selectedLunchDinnerItems.size(); i++)
+        {
+            if (foodlist1.selectedLunchDinnerItems.get(i).type=="Dinner"){
+                tuesdayDiet.append("\n" + foodlist1.selectedLunchDinnerItems.get(i).name);}
+        }
+
+//WEDNESDAY
+        wednesdayDiet.setText("");
+        foodList foodlist2 = new foodList(intakeCalories);
+        wednesdayDiet.append("For breakfast");
+        for(int i =0; i<foodlist2.selectedBreakfastItems.size(); i++)
+        {
+            wednesdayDiet.append("\n" + foodlist2.selectedBreakfastItems.get(i).name);
+        }
+
+        wednesdayDiet.append("\n\nFor lunch");
+        for(int i =0; i<foodlist2.selectedLunchDinnerItems.size(); i++)
+        {
+            wednesdayDiet.append("\n" + foodlist2.selectedLunchDinnerItems.get(i).name);
+        }
+        wednesdayDiet.append("\n\nFor dinner");
+        for(int i =0; i<foodlist2.selectedLunchDinnerItems.size(); i++)
+        {
+            if (foodlist2.selectedLunchDinnerItems.get(i).type=="Dinner"){
+                wednesdayDiet.append("\n" + foodlist2.selectedLunchDinnerItems.get(i).name);}
+        }
+
+//THURSDAY
+        thursdayDiet.setText("");
+        foodList foodlist3 = new foodList(intakeCalories);
+        thursdayDiet.append("For breakfast");
+        for(int i =0; i<foodlist3.selectedBreakfastItems.size(); i++)
+        {
+            thursdayDiet.append("\n" + foodlist3.selectedBreakfastItems.get(i).name);
+        }
+
+        thursdayDiet.append("\n\nFor lunch");
+        for(int i =0; i<foodlist3.selectedLunchDinnerItems.size(); i++)
+        {
+            thursdayDiet.append("\n" + foodlist3.selectedLunchDinnerItems.get(i).name);
+        }
+        thursdayDiet.append("\n\nFor dinner");
+        for(int i =0; i<foodlist3.selectedLunchDinnerItems.size(); i++)
+        {
+            if (foodlist3.selectedLunchDinnerItems.get(i).type=="Dinner"){
+                thursdayDiet.append("\n" + foodlist3.selectedLunchDinnerItems.get(i).name);}
+        }
+
+        //FRIDAY
+        fridayDiet.setText("");
+        foodList foodlist4 = new foodList(intakeCalories);
+        fridayDiet.append("For breakfast");
+        for(int i =0; i<foodlist4.selectedBreakfastItems.size(); i++)
+        {
+            fridayDiet.append("\n" + foodlist4.selectedBreakfastItems.get(i).name);
+        }
+
+        fridayDiet.append("\n\nFor lunch");
+        for(int i =0; i<foodlist4.selectedLunchDinnerItems.size(); i++)
+        {
+            fridayDiet.append("\n" + foodlist4.selectedLunchDinnerItems.get(i).name);
+        }
+        fridayDiet.append("\n\nFor dinner");
+        for(int i =0; i<foodlist4.selectedLunchDinnerItems.size(); i++)
+        {
+            if (foodlist4.selectedLunchDinnerItems.get(i).type=="Dinner"){
+                fridayDiet.append("\n" + foodlist4.selectedLunchDinnerItems.get(i).name);}
+        }
+        //SATURDAY
+        saturdayDiet.setText("");
+        foodList foodlist5 = new foodList(intakeCalories);
+        saturdayDiet.append("For breakfast");
+        for(int i =0; i<foodlist5.selectedBreakfastItems.size(); i++)
+        {
+            saturdayDiet.append("\n" + foodlist5.selectedBreakfastItems.get(i).name);
+        }
+
+        saturdayDiet.append("\n\nFor lunch");
+        for(int i =0; i<foodlist5.selectedLunchDinnerItems.size(); i++)
+        {
+            saturdayDiet.append("\n" + foodlist5.selectedLunchDinnerItems.get(i).name);
+        }
+        saturdayDiet.append("\n\nFor dinner");
+        for(int i =0; i<foodlist5.selectedLunchDinnerItems.size(); i++)
+        {
+            if (foodlist5.selectedLunchDinnerItems.get(i).type=="Dinner"){
+                saturdayDiet.append("\n" + foodlist5.selectedLunchDinnerItems.get(i).name);}
+        }
+
+        //SUNDAY
+
+        sundayDiet.setText("");
+        foodList foodlist6 = new foodList(intakeCalories);
+        sundayDiet.append("For breakfast");
+        for(int i =0; i<foodlist6.selectedBreakfastItems.size(); i++)
+        {
+            sundayDiet.append("\n" + foodlist6.selectedBreakfastItems.get(i).name);
+        }
+
+        sundayDiet.append("\n\nFor lunch");
+        for(int i =0; i<foodlist6.selectedLunchDinnerItems.size(); i++)
+        {
+            sundayDiet.append("\n" + foodlist6.selectedLunchDinnerItems.get(i).name);
+        }
+        sundayDiet.append("\n\nFor dinner");
+        for(int i =0; i<foodlist6.selectedLunchDinnerItems.size(); i++)
+        {
+            if (foodlist6.selectedLunchDinnerItems.get(i).type=="Dinner"){
+                sundayDiet.append("\n" + foodlist6.selectedLunchDinnerItems.get(i).name);}
+        }
+
+
+    }
+
 
 
 }
